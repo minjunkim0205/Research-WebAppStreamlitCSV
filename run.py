@@ -12,7 +12,26 @@ file = pd.read_csv("./penguins.csv")
 
 # Task 01
 st.title("Task 01")
+if 'name' not in st.session_state:
+    st.session_state['name'] = ''
 
+if 'age' not in st.session_state:
+    st.session_state['age'] = 0
+
+if 'color' not in st.session_state:
+    st.session_state['color'] =''
+
+name_input = st.text_input("이름을 입력하세요.", value=st.session_state['name'])
+age_input = st.slider("나이", min_value=0, max_value=100, value=25, key="age")
+color_input = st.st.selectbox("좋아하는 색상", ['red','orange','green','blue','violet'])
+
+agree = st.checkbox("이용 약관에 동의합니다.")
+
+if st.button('?제출'):
+    st.session_state['name'] = name_input
+    st.session_state['age'] = age_input
+    st.session_state['color'] = color_input
+    
 # Task 02
 st.title("Task 02")
 
