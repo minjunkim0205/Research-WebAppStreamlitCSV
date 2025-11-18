@@ -3,6 +3,10 @@
 > 2025년 2학기 오픈소스SW의이해[01] - Week11주차 Streamlit CSV Read 팀 프로젝트  
 > **주제:** Streamlit 연습하기
 
+## Preview
+
+![Preview](Preview.png)
+
 ---
 
 ## 팀원 소개
