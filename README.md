@@ -11,12 +11,12 @@
 
 ## 팀원 소개
 
-| 이름 | 역할 | GitHub |
-|------|------|---------|
-| 김민준 | 팀장 | [minjunkim0205](https://github.com/minjunkim0205) |
-| 안현서 | 팀원 | [han183536-ux](https://github.com/han183536-ux) |
-| 김재욱 | 팀원 | [Gplexs](https://github.com/Gplexs) |
-| 김민태 | 팀원 | [Assadgang](https://github.com/Assadgang) |
+| 이름 | 역할 | 담당 테스크 | GitHub |
+|------|------|------------|---------|
+| 김민준 | 팀장 | 4,5 | [minjunkim0205](https://github.com/minjunkim0205) |
+| 안현서 | 팀원 | 3 | [han183536-ux](https://github.com/han183536-ux) |
+| 김재욱 | 팀원 | 1,2 | [Gplexs](https://github.com/Gplexs) |
+| 김민태 | 팀원 | 6,7 | [Assadgang](https://github.com/Assadgang) |
 
 > 위 링크는 팀원 각자의 GitHub 프로필로 연결됩니다
 
