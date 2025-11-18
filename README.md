@@ -20,9 +20,9 @@
 
 ## 환경 설정 (최초1회)
 
-> Python 3.13.x 버전 이상 추천
-> .venv 가상환경 생성
-> pip install -r requirements.txt
+> Python 3.13.x 버전 이상 추천  
+> .venv 가상환경 생성  
+> pip install -r requirements.txt  
 
 ---
 
