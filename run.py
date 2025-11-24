@@ -39,7 +39,10 @@ if st.button('제출'):
 
 # Task 02
 st.title("Task 02")
-
+if st.session_state['name']:
+    st.write(f"**이름:** {st.session_state['name']}")
+    st.write(f"**나이:** {st.session_state['age']}")
+    st.write(f"**좋아하는 색상:** {st.session_state['color']}")
 # Task 03
 st.title("Task 03")
 # 막대 그래프 생성
