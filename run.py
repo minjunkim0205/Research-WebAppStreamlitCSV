@@ -17,28 +17,32 @@ if 'name' not in st.session_state:
     st.session_state['name'] = ''
 
 if 'age' not in st.session_state:
-    st.session_state['age'] = 0
+    st.session_state['age'] = 25  # 기본값 25로 세팅
 
 if 'color' not in st.session_state:
-    st.session_state['color'] =''
+    st.session_state['color'] = ''
 
 name_input = st.text_input("이름을 입력하세요.", value=st.session_state['name'])
-age_input = st.slider("나이", min_value=0, max_value=100, value=25, key="age")
+
+# ✅ key 제거, value를 session_state 값으로 사용
+age_input = st.slider("나이", min_value=0, max_value=100, value=st.session_state['age'])
+
 color_input = st.selectbox("좋아하는 색상", ['red','orange','green','blue','violet'])
 
 agree = st.checkbox("이용 약관에 동의합니다.")
 
-if st.button('?제출'):
+if st.button('제출'):
     st.session_state['name'] = name_input
     st.session_state['age'] = age_input
     st.session_state['color'] = color_input
-    
+    st.success("제출이 완료되었습니다!")
+
 # Task 02
 st.title("Task 02")
 
 # Task 03
 st.title("Task 03")
-#막대 그래프 생성
+# 막대 그래프 생성
 chart_data = pd.DataFrame(
     {
         "X 축": list(range(20)) * 3,
@@ -46,21 +50,23 @@ chart_data = pd.DataFrame(
         "색": ["A"] * 20 + ["B"] * 20 + ["C"] * 20
     }
 )
-#막대 그래프 출력
-st.bar_chart(chart_data, x="X 축", y="Y 축", color = "색")
-#선 그래프 생성
+# 막대 그래프 출력
+st.bar_chart(chart_data, x="X 축", y="Y 축", color="색")
+
+# 선 그래프 생성
 line_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=["A", "B", "C"]
 )
-#선 그래프 출력
+# 선 그래프 출력
 st.line_chart(line_data)
-#영역 그래프 생성
+
+# 영역 그래프 생성
 area_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=["A", "B", "C"]
 )
-#영역 그래프 출력
+# 영역 그래프 출력
 st.area_chart(area_data)
 
 # Task 04
@@ -80,6 +86,7 @@ island_filter = st.multiselect(
     options=island_list,
     default=island_list
 )
+
 min_value, max_value = int(file["bill_length_mm"].min()), int(file["bill_length_mm"].max())
 bill_length_range = st.slider(
     "부리 길이 범위 (bill_length_mm):",
@@ -87,6 +94,7 @@ bill_length_range = st.slider(
     max_value=max_value,
     value=(min_value, max_value)
 )
+
 filtered_file = file[
     (file["species"].isin(species_filter)) &
     (file["island"].isin(island_filter)) &
